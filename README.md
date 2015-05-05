@@ -11,6 +11,9 @@ Frogger Game is a web game, an Andela project created using HTML, CSS, javaScrip
 Author [Akinjide Bankole](https://twitter.com/JideBhanks)
 
 
+## Fixed Bugs
+
+
 ## Showcase Demo
 View the gh-page  [showcase demo](http://JideBhanks.github.io/) to see the page in action. The showcase provides a full preview of the project.
 
