@@ -19,7 +19,11 @@ Added Instructrions to ReadMe
 This Game is simpler than it looks.
 
 In the game you'll control characters, named Warriors.  
-![Warriors](images/char-boy.png, images/char-cat-girl.png, images/char-horn-girl.png, images/char-pink-girl.png, images/char-princess-girl.png)
+![Warriors](images/char-boy.png)
+![Warriors](images/char-cat-girl.png)
+![Warriors](images/char-horn-girl.png)
+![Warriors](images/char-pink-girl.png)
+![Warriors](images/char-princess-girl.png)  
 
 Their names are **Warriors**.  You'll use the **arrow keys**...  
 
