@@ -9,17 +9,18 @@ document.getElementById('score').innerHTML= "<img src='images/Star.png'>" + scor
 var positionArray = [68, 145, 230, 314]; //position of bugs
 var speedArray = [80, 130, 160, 50, 20]; //speed values of bugs
 
-//
+//Resets the player position
 function startover(){
   player.x = 0;
   player.y = 390;       
 }
 
+//Player reaching the water
 function waterCollisions(){
-  if(player.y === 50){
-    score += 10;
-    document.getElementById('score').innerHTML= "<img src='images/Star.png'>" + score;
-    startover();
+  if(player.y === 50){ //Checks if the player has reach the top
+    score += 10; //increments the score by 10
+    document.getElementById('score').innerHTML= "<img src='images/Star.png'>" + score; //pushes the score into the ID score from DOM
+    startover(); //Calls startover function
   }
 }
 
