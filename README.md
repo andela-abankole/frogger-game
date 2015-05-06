@@ -44,11 +44,13 @@ I hope you enjoy the game!!
 
 - Enemies not reaching the last grass
 
-- Sound playing immediately the character moves
+- Sound not playing immediately the character moves
 
 - Warriors not getting to the second grass layer
 
-- 
+- Tags not displaying properly
+
+- Warriors not getting points when they get to the water
 
 
 ## Browser Support
