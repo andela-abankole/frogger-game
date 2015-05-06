@@ -1,18 +1,18 @@
 body {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    background: url(../images/body.jpg);
-}
-section{
-  margin-top: -65px;
-}
-h1 {font-size: 50px; margin: -10px 0 -20px 0;}
-article {
-  width: 70%;
-  margin: 0 auto;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: url(../images/body.jpg);
 }
 
-#score {float: left;}
-#life {float: right;}
+section {margin-top: -65px;}
+h1 {font-size: 55px; margin: -10px 0 -50px -140px; font-family: 'Indie Flower'}
+
+article {
+  width: 80%;
+  margin: 0 auto;
+}
+strong {font-size: 16px;}
+#score {float: left; width: 100px; height: 150px;}
+#life {float: right; width: 100px; height: 150px;}
