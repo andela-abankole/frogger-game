@@ -2,12 +2,16 @@
  * @author akinjide.bankole@andela.co (Akinjide Bankole 2015)
  */
 var score = 0; //Score Variable 
+var lives = 3; //Life Variable 
 
 //Gets ID score from DOM and adds image with the default score value
 document.getElementById('score').innerHTML= "<img src='images/Star.png'>" + score;
 
+//Gets ID score from DOM and adds image with the default life value
+document.getElementById('life').innerHTML = "<img src='images/Heart.png'>" + lives;
+
 var positionArray = [68, 145, 230, 314]; //position of bugs
-var speedArray = [80, 130, 160, 50, 20]; //speed values of bugs
+var speedArray = [80, 130, 160, 50, 30]; //speed values of bugs
 
 //Resets the player position
 function startover(){
@@ -17,10 +21,14 @@ function startover(){
 
 //Player reaching the water
 function waterCollisions(){
-  if(player.y === 50){ //Checks if the player has reach the top
+  document.getElementById('score').innerHTML= "<img src='images/Star.png'>" + score; //pushes the score into the ID score from DOM
+  if(player.y === -35){ //Checks if the player has reach the top
     score += 10; //increments the score by 10
-    document.getElementById('score').innerHTML= "<img src='images/Star.png'>" + score; //pushes the score into the ID score from DOM
     startover(); //Calls startover function
+
+    var winSound = document.createElement("audio");
+    winSound.setAttribute("src", "beats/ok.mp3");
+    winSound.play();
   }
 }
 
@@ -124,7 +132,7 @@ var Player = function(){
       }
     }
     else if(key === "up") {
-      if(this.y - 85 >= 0){
+      if(this.y - 85 >= -50){
         this.y = this.y - 85;
         console.log(player.y)
       }
@@ -178,3 +186,23 @@ document.addEventListener('keyup', function(e) {
 
   player.handleInput(allowedKeys[e.keyCode]);
 });
+
+function checkCollisions(enemy, player) {
+  document.getElementById('life').innerHTML= "<img src='images/Heart.png'>" + lives; //pushes the score into the ID score from DOM  
+    for(var i in enemy) {
+        if((player.x - enemy[i].x < 50 && player.y - enemy[i].y < 50) && (player.x - enemy[i].x > -50 && player.y - enemy[i].y > -50)) {
+           startover();
+           if(lives > 0){
+              lives--;
+            }              
+            else {
+              document.getElementById('game').innerHTML= "GAME OVER, YOUR SCORE IS: " + score; 
+              lives = 3;
+              score = 0;
+            }
+        var collisionSound = document.createElement("audio");
+        collisionSound.setAttribute("src", "beats/reset.wav");
+        collisionSound.play();
+        }
+    }
+}
