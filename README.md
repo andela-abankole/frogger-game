@@ -3,7 +3,7 @@ Frogger Game
 
 Fun Fun Fun!
 
-# v0.4
+# v0.5
 
 ## About And Showcase Demo
 Frogger Game is a web game, an Andela project created using HTML, CSS, javaScript (and you can play the game [here](http://)).
@@ -51,6 +51,8 @@ I hope you enjoy the game!!
 - Tags not displaying properly
 
 - Warriors not getting points when they get to the water
+
+- Minor Errors And Bugs
 
 
 ## Browser Support
