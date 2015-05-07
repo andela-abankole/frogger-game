@@ -196,7 +196,8 @@ function checkCollisions(enemy, player) {
               lives--;
             }              
             else {
-              document.getElementById('game').innerHTML= "GAME OVER, YOUR SCORE IS: " + score; 
+              document.getElementById('gameOverMessage').style.display = "block";
+              document.getElementById('gameOverMessage').innerHTML += "Game Over! <br />Score: " + score; 
               lives = 3;
               score = 0;
             }
