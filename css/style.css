@@ -6,8 +6,8 @@ body {
   background: url(../images/body.jpg);
 }
 
-section {margin-top: -65px;}
-h1 {font-size: 55px; margin: -10px 0 -50px -140px; font-family: 'Indie Flower'}
+.wrapper {margin-bottom: -70px;}
+h1 {font-size: 55px; margin: -10px 0 -40px -140px; font-family: 'Indie Flower';}
 
 article {
   width: 80%;
@@ -16,3 +16,5 @@ article {
 strong {font-size: 16px;}
 #score {float: left; width: 100px; height: 150px;}
 #life {float: right; width: 100px; height: 150px;}
+#game {  font-size: 70px;
+  color: red;}
