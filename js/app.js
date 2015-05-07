@@ -3,6 +3,7 @@
  */
 var score = 0; //Score Variable 
 var lives = 3; //Life Variable 
+var continueGame = true;
 
 //Gets ID score from DOM and adds image with the default score value
 document.getElementById('score').innerHTML= "<img src='images/Star.png'>" + score;
@@ -23,7 +24,7 @@ function startover(){
 function waterCollisions(){
   document.getElementById('score').innerHTML= "<img src='images/Star.png'>" + score; //pushes the score into the ID score from DOM
   if(player.y === -35){ //Checks if the player has reach the top
-    score += 10; //increments the score by 10
+    score += 30; //increments the score by 10
     startover(); //Calls startover function
 
     var winSound = document.createElement("audio");
@@ -64,7 +65,7 @@ var Enemy = function() {
       }
 
       else {
-         this.x += this.speed * dt + 3;   //multiply any movement by the dt parameter
+         this.x += this.speed * dt + 6;   //multiply any movement by the dt parameter
                                       // which will ensure the game runs at the same speed for
                                       // all computers.
       }
@@ -119,12 +120,19 @@ var Player = function(){
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
 
+
   Player.prototype.handleInput = function(key){
     //Controls the movement of player
+
+    if(!continueGame){
+      return;
+    }
+
     if(key === "left"){
       if(this.x - 100 >= 0){
         this.x = this.x - 100;
       }
+      
     }
     else if(key === "right"){
       if(this.x + 100 <= 601){
@@ -146,6 +154,7 @@ var Player = function(){
         this.y = this.y + 85;
       }
     }
+
     //Sound for Player movement
     var move = document.createElement("audio");//Creates new Element
     move.setAttribute('src', 'beats/move.wav');//Recieves sound clip from source
@@ -187,6 +196,7 @@ document.addEventListener('keyup', function(e) {
   player.handleInput(allowedKeys[e.keyCode]);
 });
 
+
 function checkCollisions(enemy, player) {
   document.getElementById('life').innerHTML= "<img src='images/Heart.png'>" + lives; //pushes the score into the ID score from DOM  
     for(var i in enemy) {
@@ -196,10 +206,12 @@ function checkCollisions(enemy, player) {
               lives--;
             }              
             else {
-              document.getElementById('gameOverMessage').style.display = "block";
-              document.getElementById('gameOverMessage').innerHTML += "Game Over! <br />Score: " + score; 
+              var gameOver = document.getElementById('gameOverMessage');
+              gameOver.style.display = "block";
+              gameOver.innerHTML += "Game Over! <br />Score: " + score; 
               lives = 3;
               score = 0;
+              continueGame = false;
             }
         var collisionSound = document.createElement("audio");
         collisionSound.setAttribute("src", "beats/reset.wav");
