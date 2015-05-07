@@ -7,6 +7,28 @@ body {
 }
 
 .wrapper {margin-bottom: -70px;}
+
+#gameOverMessage {
+  display: none;
+  width: 600px;
+  height: 500px;
+  position: absolute;
+  left: 28%;
+  top: 100px;
+  line-height: 80px;
+  text-align:center;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: arial;
+  color: red;
+  background: rgba(0, 0, 0, .5);
+  border-radius: 20px;
+}
+
+button {
+  padding: 10px;
+}
+
 h1 {font-size: 55px; margin: -10px 0 -40px -140px; font-family: 'Indie Flower';}
 
 article {
