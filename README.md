@@ -6,7 +6,7 @@ Fun Fun Fun!
 # v0.5
 
 ## About And Showcase Demo
-Frogger Game is a web game, an Andela project created using HTML, CSS, javaScript (and you can play the game [here](http://)).
+Frogger Game is a web game, an Andela project created using HTML, CSS, javaScript (and you can play the game [here](http://andela-abankole.github.io/frogger-game)).
 
 Author [Akinjide Bankole](https://twitter.com/JideBhanks)
 

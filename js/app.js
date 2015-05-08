@@ -213,8 +213,9 @@ function checkCollisions(enemy, player) {
               score = 0;
               continueGame = false;
             }
-        var collisionSound = document.createElement("audio");
-        collisionSound.setAttribute("src", "beats/reset.wav");
+        //Sound for Player movement
+        var collisionSound = document.createElement("audio");//Creates new Element
+        collisionSound.setAttribute("src", "beats/reset.wav");//Recieves sound clip from source
         collisionSound.play();
         }
     }
