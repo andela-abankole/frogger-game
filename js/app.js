@@ -69,9 +69,10 @@ var Enemy = function() {
       }
 
       else {
-         this.x += this.speed * dt + 6;   //multiply any movement by the dt parameter
-                                      // which will ensure the game runs at the same speed for
-                                      // all computers.
+         this.x += this.speed * dt + 6; /** multiply any movement by the dt parameter
+                                          * which will ensure the game runs at the same speed for
+                                          * all computers.
+                                          */
       }
     }
 
